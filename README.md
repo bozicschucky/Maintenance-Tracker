@@ -6,7 +6,7 @@ Maintenance Tracker App is an application that provides users with the ability t
 You can clone the project
 https://github.com/bozicschucky/Maintenance-Tracker/tree/feature/UI
 
-# Host html templates
+# Hosted html files
 https://bozicschucky.github.io/Maintenance-Tracker/
 
 
