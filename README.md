@@ -1,30 +1,37 @@
 
-# Maintenance-Tracker
+# Maintenance-Tracker Api
 Maintenance Tracker App is an application that provides users with the ability to reach out to repairs department regarding repair or maintenance requests.
 # Getting Started
 
 You can clone the project
-https://github.com/bozicschucky/Maintenance-Tracker/tree/feature/UI
+https://github.com/bozicschucky/Maintenance-Tracker/tree/api
 
-# Hosted html files
-https://bozicschucky.github.io/Maintenance-Tracker/
+# Features
+How to install and run the project.
+ - clone the project
+ - You must have python 3.5 and pip installed
+ - run pip install -r requirements.txt
+ - That should install the project dependencies (Recommend using virtual env)
+ - Then run the app by running python app.py
+
+# Hosted app on heroku
+Coming soon
 
 
 # Features
- - Users can create an account and log in.
- - The users can make maintenance or repairs request.
- - The admin can approve/reject a repair/maintenance request.
- - The admin can mark request as resolved once it is done.
- - The admin can view all maintenance/repairs requests on the application
- - The admin can filter requests
- - The user can view all his/her requests
+ - Get all the requests for a logged in user.
+ - Get a request for a logged in user.
+ - Create a request.
+ - Modify a request
+
 
 
 
 
 # Developed using
- - HTML5
- - CSS3
+ - Flask 1.0
+ - Flaskrestplus
+ - python3.6
 
 
 # Authors
