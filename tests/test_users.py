@@ -1,7 +1,5 @@
-from flask import Flask
-import pytest
-import pytest_flask
 import requests
+from flask import Flask
 
 app = Flask(__name__)
 
