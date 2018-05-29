@@ -6,8 +6,7 @@ Maintenance Tracker App is an application that provides users with the ability t
 You can clone the project
 https://github.com/bozicschucky/Maintenance-Tracker/tree/api
 
-# Features
-How to install and run the project.
+# How to install and run the project.
  - clone the project
  - You must have python 3.5 and pip installed
  - run pip install -r requirements.txt
@@ -15,7 +14,7 @@ How to install and run the project.
  - Then run the app by running python app.py
 
 # Hosted app on heroku
-Coming soon
+Coming soon so wait up
 
 
 # Features
