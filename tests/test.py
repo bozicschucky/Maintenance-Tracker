@@ -5,7 +5,7 @@ import requests
 
 app = Flask(__name__)
 
-# client = app.test_client()
+client = app.test_client()
 mock_data = {'users': ['sam', 'anton', 'mike']}
 mock_requests = [ {'request 1': ' hey i am requesting for a car fix'}, {'request 2 ': ' hey i amm requesting for a fix'}]
 
