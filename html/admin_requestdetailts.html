@@ -8,8 +8,8 @@
     <title>Request Details</title>
     <link rel="shortcut icon" href="../favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/shared.css">
-    <link rel="stylesheet" href="../../css/users.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/users.css">
 </head>
 
 <body>
@@ -26,29 +26,33 @@
     </div>
     <nav class="main-nav">
         <ul class="main-nav__items">
-            <li class="main-nav__item">
-                <a href="../html/forms/users/admin_approve.html">Users</a>
-            </li>
-            <li class="main-nav__item">
-                <a href="../html/forms/forms/login.html">Login</a>
-            </li>
-            <li class="main-nav__item main-nav__item--cta">
-                <a href="../html/forms/forms/index.html">Sign up</a>
-            </li>
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="admin_approve.html">Admin</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="forms/user_requests.html">Requests</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="../index.html">Logout</a>
+                </li>
+            </ul>
         </ul>
     </nav>
 </header>
 <nav class="mobile-nav">
     <ul class="mobile-nav__items">
-        <li class="mobile-nav__item">
-            <a href="packages/index.html">Users</a>
-        </li>
-        <li class="mobile-nav__item">
-        <li class="user__feature"><a href="../html/forms/forms/index.html">Login</a></li>
-        </li>
-        <li class="mobile-nav__item mobile-nav__item--cta">
-            <a href="../html/forms/forms/index.html">Sign up</a>
-        </li>
+        <ul class="main-nav__items">
+            <li class="main-nav__item">
+                <a href="admin_approve.html">Admin</a>
+            </li>
+            <li class="main-nav__item">
+                <a href="forms/user_requests.html">Requests</a>
+            </li>
+            <li class="main-nav__item main-nav__item--cta">
+                <a href="../index.html">Logout</a>
+            </li>
+        </ul>
     </ul>
 </nav>
 <main>
@@ -90,7 +94,7 @@
         </ul>
     </nav>
 </footer>
-<script src="../../Js/shared.js"></script>
+<script src="../Js/shared.js"></script>
 </body>
 
 </html>
