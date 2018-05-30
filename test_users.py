@@ -5,8 +5,6 @@ import requests
 
 # client = app.test_client()
 # mock_data = {'users': ['sam', 'anton', 'mike']}
-# mock_requests = [{'request 1': ' hey i am requesting for a car fix'}, {'request 2 ': ' hey i amm requesting for a fix'}]
-
 
 class ApiTest(unittest.TestCase):
     """ This represents the api test class for doing tdd """
