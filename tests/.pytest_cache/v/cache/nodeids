@@ -1,0 +1,5 @@
+[
+  "test.py::test_create_user_request",
+  "test.py::test_get_all_user_requests",
+  "test.py::test_get_user_request_by_id"
+]
