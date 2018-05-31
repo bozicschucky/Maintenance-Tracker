@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/bozicschucky/Maintenance-Tracker/badge.svg?branch=master)](https://coveralls.io/github/bozicschucky/Maintenance-Tracker?branch=master)
+[![Build Status](https://travis-ci.org/bozicschucky/Maintenance-Tracker.svg?branch=ch-test-get-users-157940615)](https://travis-ci.org/bozicschucky/Maintenance-Tracker)
 
 # Maintenance-Tracker-Api
 Maintenance Tracker Api is an application that provides users with the ability to reach out to repairs department regarding repair or maintenance requests.
