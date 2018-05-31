@@ -1,9 +1,18 @@
 from flask import Flask
-from flask_restful import Api
+from flask_jwt import JWT, jwt_required
+from flask_restful import Resource, Api
+from security import authenticate, identity
 
 app = Flask(__name__)
 app.secret_key = 'Code'
 api = Api(app)
+
+jwt = JWT(app, authenticate, identity)
+
+requests = [
+    {'id': 1, 'request': 'I am requesting a car fix'},
+    {'id': 2, 'request': 'This is the second request'}
+]
 
 
 class UserRequests(Resource):
