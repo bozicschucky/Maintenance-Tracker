@@ -1,7 +1,7 @@
+from auth import authenticate, identity
 from flask import Flask, request
 from flask_jwt import JWT, jwt_required
 from flask_restful import Resource, Api
-from security import authenticate, identity
 
 app = Flask(__name__)
 app.secret_key = 'Code'
@@ -46,11 +46,11 @@ class UserRequest(Resource):
         return item
 
 
-
 class UserRequests(Resource):
-    @jwt_required()
+    # @jwt_required()
     def get(self):
         return {'requests': requests}
+
 
 api.add_resource(UserRequest, '/api/v1/user/request/<int:id>')
 api.add_resource(UserRequests, '/api/v1/user/requests')
