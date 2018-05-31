@@ -15,6 +15,17 @@ requests = [
 ]
 
 
+class UserRequest(Resource):
+    @jwt_required()
+    def get(self, id):
+        for item in requests:
+            if item['id'] == id:
+                return item
+        # item = next(filter(lambda x:x['name'] == name,items), None)
+        return {'Request': None}, 404
+
+
+
 class UserRequests(Resource):
     @jwt_required()
     def get(self):
