@@ -1,0 +1,5 @@
+{
+  "test.py::test_create_user_request": true,
+  "test.py::test_get_all_user_requests": true,
+  "test.py::test_get_user_request_by_id": true
+}

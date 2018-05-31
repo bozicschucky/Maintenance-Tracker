@@ -1,0 +1,11 @@
+{
+  "app.py::test_answer": true,
+  "test.py::TestClass::()::test_two": true,
+  "test.py::test_answer": true,
+  "test_hello_world.py::TestHello_world::test_hello_world": true,
+  "test_users.py::test_create_user_request": true,
+  "test_users.py::test_get_all_user_requests": true,
+  "test_users.py::test_get_user_request_by_id": true,
+  "test_users.py::test_update_user_request_by_id": true,
+  "tests.py::test_bucketlist_creation": true
+}
