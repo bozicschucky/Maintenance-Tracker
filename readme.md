@@ -30,10 +30,7 @@ https://github.com/bozicschucky/Maintenance-Tracker/tree/ft-Api(v1)
 ![screenshot 23](https://user-images.githubusercontent.com/12638091/40767480-7ea7f3c6-6467-11e8-8d8c-b4e3dd1d71f8.png)
 
 # Hosted on heroku
-https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/ after authentication
-
-![Alt text](Week One/images/img (7).png?raw=true "Title")
-
+Check the [app](https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/) out after authentication
 
 # Features
  - Get all the requests for a logged in user
