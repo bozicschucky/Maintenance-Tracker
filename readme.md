@@ -8,10 +8,14 @@ https://github.com/bozicschucky/Maintenance-Tracker/tree/feature/UI
 
 #Usage 
 - Open post man and navigate to the following endpoints
-   - for authentication first visit the route /auth to get jw token to be used for login
+   - For authentication visit https://maintainencetrackerapi.herokuapp.com/auth to get a jwt token.
    - The password is 123456 and the username is admin which are supposed to be filled into the headers using post man.
-    
-   - api/v1/user/request/<int:id> where <int:id> is any number passed in the url
+   - Content-type selection should be application/json
+   - After authentication visit the urls below to create requests
+   - post https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/<int:id> where <int:id> is any number passed in the url
+   - get  https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/<int:id>  to get a request of the user by id
+   - put  https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/<int:id>  to either create request a request when it doesn't exit or update an existing request.
+   - get https://maintainencetrackerapi.herokuapp.com/api/v1/user/requests to get all requests created by a logged user
    - api/v1/user/requests
 
 # Hosted on heroku
