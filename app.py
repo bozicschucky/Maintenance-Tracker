@@ -10,8 +10,12 @@ api = Api(app)
 jwt = JWT(app, authenticate, identity)
 
 requests = [
-    {'id': 1, 'request': 'I am requesting a car fix'},
-    {'id': 2, 'request': 'This is the second request'}
+    {'id': 1, 'request': 'I am requesting a car fix',
+     "status": True, "request_type": "repair", "request_details": "This the description"},
+    {'id': 2, 'request': 'This is the second request',
+     "status": False, "request_type": "repair", "request_details": "This the description"},
+    {'id': 3, 'request': 'This is the third request',
+     "status": False, "request_type": "repair", "request_details": "This the description"}
 ]
 
 
@@ -30,7 +34,8 @@ class UserRequest(Resource):
             if item['id'] == id:
                 return {'message': 'An item with {} already exits'.format(id)}, 400
         data = request.get_json()
-        item = {'id': id, 'request': data['request']}
+        item = {'id': id, 'request': data['request'], 'status': data['status']
+            , "request_type": data["request_type"], "request_details": data["request_details"]}
         requests.append(item)
         return item, 201
 
@@ -39,7 +44,9 @@ class UserRequest(Resource):
         data = request.get_json()
         item = next(filter(lambda x: x['id'] == id, requests), None)
         if item is None:
-            item = {'id': id, "request": data['request']}
+            item = {'id': id, 'request': data['request'], 'status': data['status']
+                , "request_type": data["request_type"], "request_details": data["request_details"]}
+            requests.append(item)
             requests.append(item)
         else:
             item.update(data)
