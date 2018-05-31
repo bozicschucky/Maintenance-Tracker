@@ -8,7 +8,7 @@ Maintenance Tracker Api is an application that provides users with the ability t
 You can clone the project
 https://github.com/bozicschucky/Maintenance-Tracker/tree/ft-Api(v1)
 
-#Usage 
+# Usage 
 - Open post man and navigate to the following endpoints
    - For authentication visit https://maintainencetrackerapi.herokuapp.com/auth to get a jwt token.
    - In the body of the request provide the following details { "username":"admin","password":"123456"} to get a jwt token that you can use on the other endpoints.
@@ -20,7 +20,7 @@ https://github.com/bozicschucky/Maintenance-Tracker/tree/ft-Api(v1)
    - get https://maintainencetrackerapi.herokuapp.com/api/v1/user/requests to get all requests created by a logged user
    - api/v1/user/requests
 
-#Screenshots
+# Screenshots
 ![img 7](https://user-images.githubusercontent.com/12638091/40767278-f0484504-6466-11e8-8645-c20d23b5b8d9.png)
 ![screenshot 8](https://user-images.githubusercontent.com/12638091/40767342-1f2f0808-6467-11e8-9884-26a3a2ad897d.png)
 ![screenshot 9](https://user-images.githubusercontent.com/12638091/40767350-24dcaab2-6467-11e8-9e06-bf60c086f769.png)
