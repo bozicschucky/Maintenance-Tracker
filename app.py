@@ -24,6 +24,16 @@ class UserRequest(Resource):
         # item = next(filter(lambda x:x['name'] == name,items), None)
         return {'Request': None}, 404
 
+    @jwt_required()
+    def post(self, id):
+        for item in requests:
+            if item['id'] == id:
+                return {'message': 'An item with {} already exits'.format(id)}, 400
+        data = request.get_json()
+        item = {'id': id, 'request': data['request']}
+        requests.append(item)
+        return item, 201
+
 
 
 class UserRequests(Resource):
