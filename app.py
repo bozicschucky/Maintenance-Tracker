@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_jwt import JWT, jwt_required
 from flask_restful import Resource, Api
 from security import authenticate, identity
@@ -33,6 +33,17 @@ class UserRequest(Resource):
         item = {'id': id, 'request': data['request']}
         requests.append(item)
         return item, 201
+
+    @jwt_required()
+    def put(self, id):
+        data = request.get_json()
+        item = next(filter(lambda x: x['id'] == id, requests), None)
+        if item is None:
+            item = {'id': id, "request": data['request']}
+            requests.append(item)
+        else:
+            item.update(data)
+        return item
 
 
 
