@@ -12,14 +12,16 @@ https://github.com/bozicschucky/Maintenance-Tracker/tree/ft-Api(v1)
    - The password is 123456 and the username is admin which are supposed to be filled into the headers using post man.
    - Content-type selection should be application/json
    - After authentication visit the urls below to create requests
-   - post https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/<int:id> where <int:id> is any number passed in the url
-   - get  https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/<int:id>  to get a request of the user by id
-   - put  https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/<int:id>  to either create request a request when it doesn't exit or update an existing request.
+   - post https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/id where id is any number passed in the url
+   - get  https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/id to get a request of the user by id
+   - put  https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/id  to either create request a request when it doesn't exit or update an existing request.
    - get https://maintainencetrackerapi.herokuapp.com/api/v1/user/requests to get all requests created by a logged user
    - api/v1/user/requests
 
 # Hosted on heroku
+https://maintainencetrackerapi.herokuapp.com/api/v1/user/request/
 
+![Alt text](Week One/images/img (7).png?raw=true "Title")
 
 
 # Features
