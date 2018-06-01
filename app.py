@@ -40,7 +40,9 @@ class UserRequest(Resource):
         data = request.get_json()
         item = next(filter(lambda x: x['id'] == id, requests), None)
         if item is None:
-            item = {'id': id, "request": data['request']}
+            item = {'id': id, 'request': data['request'], 'status': data['status'] \
+                , "request_type": data["request_type"], "request_details": data["request_details"]}
+            requests.append(item)
             requests.append(item)
         else:
             item.update(data)
