@@ -30,7 +30,8 @@ class UserRequest(Resource):
             if item['id'] == id:
                 return {'message': 'An item with {} already exits'.format(id)}, 400
         data = request.get_json()
-        item = {'id': id, 'request': data['request']}
+        item = {'id': id, 'request': data['request'], 'status': data['status'] \
+            , "request_type": data["request_type"], "request_details": data["request_details"]}
         requests.append(item)
         return item, 201
 
