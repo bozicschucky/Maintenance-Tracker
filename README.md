@@ -9,6 +9,21 @@ https://github.com/bozicschucky/Maintenance-Tracker/tree/feature/UI
 # Project Link
 https://bozicschucky.github.io/Maintenance-Tracker/
 
+#The User urls
+https://bozicschucky.github.io/Maintenance-Tracker/html/login.html
+https://bozicschucky.github.io/Maintenance-Tracker/html/signup.html
+https://bozicschucky.github.io/Maintenance-Tracker/html/createrequest.html
+https://bozicschucky.github.io/Maintenance-Tracker/html/login.html
+
+
+
+#The Admin urls
+https://bozicschucky.github.io/Maintenance-Tracker/html/admin_approve.html
+https://bozicschucky.github.io/Maintenance-Tracker/html/admin_resolve.html
+https://bozicschucky.github.io/Maintenance-Tracker/html/filter_requests.html
+https://bozicschucky.github.io/Maintenance-Tracker/html/admin_requestdetailts.html
+
+
 
 # Features
  - Users can create an account and log in.
