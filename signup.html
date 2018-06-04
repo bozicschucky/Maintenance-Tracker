@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Filter Requests</title>
-    <link rel="shortcut icon" href="../../favicon.ico">
+    <title>Sign up</title>
+    <link rel="shortcut icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/shared.css">
-    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/forms.css">
 </head>
 
 <body>
@@ -26,14 +26,14 @@
     </div>
     <nav class="main-nav">
         <ul class="main-nav__items">
-            <li class="main-nav__item">
+            <!-- <li class="main-nav__item">
                 <a href="/users/admin_approve.html">Users</a>
-            </li>
+            </li> -->
             <li class="main-nav__item">
-                <a href="/forms/login.html">Login</a>
+                <a href="html/login.html">Login</a>
             </li>
             <li class="main-nav__item main-nav__item--cta">
-                <a href="/forms/index.html">Sign up</a>
+                <a href="signup.html">Sign up</a>
             </li>
         </ul>
     </nav>
@@ -41,24 +41,33 @@
 <nav class="mobile-nav">
     <ul class="mobile-nav__items">
         <li class="mobile-nav__item">
-            <a href="packages/index.html">Users</a>
+            <a href="index.html">Users</a>
         </li>
         <li class="mobile-nav__item">
-        <li class="user__feature"><a href="/forms/index.html">Login</a></li>
+        <li class="user__feature"><a href="html/login.html">Login</a></li>
         </li>
         <li class="mobile-nav__item mobile-nav__item--cta">
-            <a href="/forms/index.html">Sign up</a>
+            <a href="index.html">Sign up</a>
         </li>
     </ul>
 </nav>
 <main class="signup-page">
-    <h1 class="signup-title">Filter through requests</h1>
+    <h1 class="signup-title">Create an Account</h1>
     <form action="signup.html" class="signup-form">
-        <label for="last-name">Filter</label>
-        <input type="text" id="create_request">
-        <button type="submit" class="button">Filter</button>
+        <label for="username">Username</label>
+        <input type="text" id="username">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email">
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <label for="password">Confirm Password</label>
+        <input type="password" id="password">
+        <input type="checkbox" id="agree-terms">
+        <label for="agree-terms">Agree to
+            <a href="#">Terms &amp; Conditions</a>
+        </label>
+        <button type="submit" class="button"><a href="html/login.html">Create </a></button>
     </form>
-
 </main>
 <footer class="main-footer">
     <nav>
@@ -72,7 +81,7 @@
         </ul>
     </nav>
 </footer>
-<script src="../../Js/shared.js"></script>
+<script src="Js/shared.js"></script>
 </body>
 
 </html>

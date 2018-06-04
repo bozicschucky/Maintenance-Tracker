@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign up</title>
-    <link rel="shortcut icon" href="../../favicon.ico">
+    <title>Login</title>
+    <link rel="shortcut icon" href="../favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/shared.css">
-    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/forms.css">
 </head>
 
 <body>
@@ -20,20 +20,17 @@
             <span class="toggle-button__bar"></span>
             <span class="toggle-button__bar"></span>
         </button>
-        <a href="signup.html" class="main-header__brand">
+        <a href="../signup.html" class="main-header__brand">
             Mtracker
         </a>
     </div>
     <nav class="main-nav">
         <ul class="main-nav__items">
             <li class="main-nav__item">
-                <a href="/users/admin_approve.html">Users</a>
-            </li>
-            <li class="main-nav__item">
-                <a href="/forms/login.html">Login</a>
+                <a href="login.html">Login</a>
             </li>
             <li class="main-nav__item main-nav__item--cta">
-                <a href="/forms/index.html">Sign up</a>
+                <a href="../signup.html">Sign up</a>
             </li>
         </ul>
     </nav>
@@ -52,21 +49,17 @@
     </ul>
 </nav>
 <main class="signup-page">
-    <h1 class="signup-title">Create an Account</h1>
-    <form action="signup.html" class="signup-form">
-        <label for="username">Username</label>
+    <h1 class="signup-title">Login into Account</h1>
+    <form action="../signup.html" class="signup-form">
+        <label for="last-name">Username</label>
         <input type="text" id="username">
-        <label for="email">E-Mail</label>
-        <input type="email" id="email">
         <label for="password">Password</label>
         <input type="password" id="password">
-        <label for="password">Confirm Password</label>
-        <input type="password" id="password">
-        <input type="checkbox" id="agree-terms">
-        <label for="agree-terms">Agree to
-            <a href="#">Terms &amp; Conditions</a>
+        <label for="agree-terms">Don't have an account .?
+            <a href="../signup.html">Create one</a>
         </label>
-        <button type="submit" class="button"><a href="login.html">Log in</a></button>
+
+        <button type="submit" class="button"><a href="user_requests.html">Log in</a></button>
     </form>
 </main>
 <footer class="main-footer">
@@ -81,7 +74,7 @@
         </ul>
     </nav>
 </footer>
-<script src="../../Js/shared.js"></script>
+<script src="../Js/shared.js"></script>
 </body>
 
 </html>
