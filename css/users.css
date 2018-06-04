@@ -109,3 +109,8 @@ main {
     padding-left: 300px;
 
 }
+
+.user__subheader a {
+    text-decoration: none;
+    color: #ff5454;
+}
