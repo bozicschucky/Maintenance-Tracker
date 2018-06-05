@@ -1,0 +1,112 @@
+#user-overview {
+    background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
+    url("images/freedom.jpg") center/cover no-repeat border-box,
+    #ff1b68;
+    width: 100vw;
+    height: 33vh;
+    position: relative;
+}
+
+#user-overview h1 {
+    color: white;
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 1.6rem;
+}
+
+#user-overview p {
+    color: white;
+    font-family: "Anton", sans-serif;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 1rem;
+}
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #user-overview {
+        height: 40vh;
+        background-position: 50% 25%;
+    }
+
+    #user-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+.section-title {
+    color: #2ddf5c;
+    text-align: center;
+}
+
+.user {
+    background: #d5ffdc;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+}
+
+.user--highlighted {
+    background: #19b84c;
+    color: white;
+}
+
+.user__annotation {
+    background: white;
+    color: #19b84c;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.user__title {
+    color: #0e4f1f;
+}
+
+.user--highlighted .user__title {
+    color: white;
+}
+
+.user__features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user__feature {
+    margin: 0.5rem 0;
+}
+
+.user__feature a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.user__feature a:hover,
+.user__feature a:active {
+    color: rgb(122, 84, 84);
+    /* background: white; */
+}
+
+@media (min-width: 40rem) {
+    .user__list {
+        width: 100%;
+        text-align: center;
+    }
+
+    .user {
+        display: inline-block;
+        width: 30%;
+        vertical-align: middle;
+        min-width: 13rem;
+        max-width: 25rem;
+    }
+
+    .user--highlighted {
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+}
