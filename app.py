@@ -1,6 +1,6 @@
 from auth import authenticate, identity
 from flask import Flask, request
-from flask_jwt import JWT, jwt_required
+from flask_jwt import JWT
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
@@ -20,7 +20,7 @@ requests = [
 
 
 class UserRequest(Resource):
-    @jwt_required()
+    # @jwt_required()
     def get(self, id):
         for item in requests:
             if item['id'] == id:
@@ -28,7 +28,7 @@ class UserRequest(Resource):
         # item = next(filter(lambda x:x['name'] == name,items), None)
         return {'Request': None}, 404
 
-    @jwt_required()
+    # @jwt_required()
     def post(self, id):
         for item in requests:
             if item['id'] == id:
@@ -39,7 +39,7 @@ class UserRequest(Resource):
         requests.append(item)
         return item, 201
 
-    @jwt_required()
+    # @jwt_required()
     def put(self, id):
         data = request.get_json()
         item = next(filter(lambda x: x['id'] == id, requests), None)
@@ -47,10 +47,14 @@ class UserRequest(Resource):
             item = {'id': id, 'request': data['request'], 'status': data['status']
                 , "request_type": data["request_type"], "request_details": data["request_details"]}
             requests.append(item)
-            requests.append(item)
         else:
             item.update(data)
         return item
+
+    def delete(self, id):
+        global requests
+        items = list(filter(lambda x: x['id'] == id, requests))
+        return {"Message": "Item deleted"}, 202
 
 
 class UserRequests(Resource):
