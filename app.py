@@ -10,12 +10,7 @@ api = Api(app)
 jwt = JWT(app, authenticate, identity)
 
 requests = [
-    {'id': 1, 'request': 'I am requesting a car fix',
-     "status": True, "request_type": "repair", "request_details": "This the description"},
-    {'id': 2, 'request': 'This is the second request',
-     "status": False, "request_type": "repair", "request_details": "This the description"},
-    {'id': 3, 'request': 'This is the third request',
-     "status": False, "request_type": "repair", "request_details": "This the description"}
+
 ]
 
 
