@@ -15,33 +15,53 @@ class AppTestCase(unittest.TestCase):
         print("==>Tearing down after tests!")
 
     def test_get_user_request(self):
-        """Test user can create a request"""
-        resp = self.app.get('/api/v1/user/request/3')
-        self.assertEqual(resp.status_code, 200)
-        self.assertIn(b'request', resp.data)
-
-    def test_api_all_user_request(self):
-        resp = self.app.get('/api/v1/user/requests')
-        assert resp.status_code, 200
-        assert resp.headers['content-type'] == 'application/json'
-        assert b'request' in resp.data
-        assert b'id' in resp.data
-
-    def test_api_create_request(self):
-        resp = self.app.post('/api/v1/user/request/10', json={'id': 4, "request": "iam requesting", "status": True,
+        """Test user can get a request after creating one"""
+        resp = self.app.post('/api/v1/user/request/10', json={'id': 10, "request": "iam requesting", "status": True,
                                                               "request_type": "repair",
                                                               "request_details": "This the description"})
         self.assertEqual(resp.status_code, 201)
+        resp = self.app.get('/api/v1/user/request/10')
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('10', str(resp.data))
+        self.assertIn('repair', str(resp.data))
+
+    def test_api_all_user_request(self):
+        resp = self.app.post('/api/v1/user/request/10', json={'id': 10, "request": "iam requesting", "status": True,
+                                                              "request_type": "repair",
+                                                              "request_details": "This the description"})
+        self.assertEqual(resp.status_code, 201)
+        resp = self.app.get('/api/v1/user/requests')
+        assert resp.status_code, 200
+        assert resp.headers['content-type'] == 'application/json'
+        self.assertIn('10', str(resp.data))
+        self.assertIn('iam requesting', str(resp.data))
+
+    def test_api_create_request(self):
+        """Test user can get a request after creating one"""
+        resp = self.app.post('/api/v1/user/request/10', json={'id': 10, "request": "iam requesting", "status": True,
+                                                              "request_type": "repair",
+                                                              "request_details": "This the description"})
+        self.assertEqual(resp.status_code, 201)
+        resp = self.app.get('/api/v1/user/request/10')
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('10', str(resp.data))
+        self.assertIn('repair', str(resp.data))
 
     def test_api_update_request(self):
-        resp = self.app.put('/api/v1/user/request/10', json={'id': 4, "request": "iam requesting", "status": True,
+        resp = self.app.post('/api/v1/user/request/10', json={'id': 10, "request": "iam requesting", "status": True,
+                                                              "request_type": "repair",
+                                                              "request_details": "This the description"})
+        self.assertEqual(resp.status_code, 201)
+        resp = self.app.put('/api/v1/user/request/10', json={'id': 10, "request": "iam requesting", "status": True,
                                                              "request_type": "repair",
                                                              "request_details": "This is updated"})
         self.assertEqual(resp.status_code, 200)
+        self.assertIn("This is updated", str(resp.data))
 
     def test_api_delete_request(self):
         resp = self.app.delete('/api/v1/user/request/1')
         self.assertEqual(resp.status_code, 202)
         self.assertNotIn(b'id', resp.data)
         self.assertIn(b'Message', resp.data)
-        # assert resp.status_code, 202
+        self.assertIn("Item deleted", str(resp.data))
+        assert resp.status_code, 202
